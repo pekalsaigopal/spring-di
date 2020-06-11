@@ -1,0 +1,14 @@
+Created Three Types of Controllers
+1. ConstructorInjectedController
+2. PropertyInjectedController
+3. SetterInjectedController
+
+Created a Service Interface GreetingService and it's implemented by GreetingServiceImpl
+
+Created JUnit Test classes for controllers
+1. ConstructorInjectedControllerTest
+2. PropertyInjectedControllerTest
+3. SetterInjectedControllerTest
+
+In these test classes see how manually dependency injection took place.
+Run these test classes.
