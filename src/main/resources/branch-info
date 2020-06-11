@@ -27,4 +27,14 @@ In case of Constructor use @Qualifier inside the argument.
 
 In case of Setter above the @Autowire annotation.
 
+OR
+
+We can set one service as Primary Service by using @Primary annotation.
+
+In this case we set PrimaryGreetingService as Primary Bean.
+
+So no need to use @Qualifier annotation.
+
+If we will use @Qualifier then it will overpower @Primary annotation.
+
 In case of Property above the @Autowire annotation.

@@ -1,6 +1,7 @@
 package in.psg.springdi;
 
 import in.psg.springdi.controllers.ConstructorInjectedController;
+import in.psg.springdi.controllers.MyController;
 import in.psg.springdi.controllers.PropertyInjectedController;
 import in.psg.springdi.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
@@ -24,6 +25,11 @@ public class SpringDiApplication {
       System.out.println("---------Constructor Injection-----");
       ConstructorInjectedController constructorInjectedController = applicationContext.getBean("constructorInjectedController",ConstructorInjectedController.class);
       System.out.println(constructorInjectedController.getGreeting());
+
+      System.out.println("--------Primary Bean-----------------");
+      MyController myController = applicationContext.getBean("myController",MyController.class);
+      System.out.println(myController.getGreeting());
+
    }
 
 }
