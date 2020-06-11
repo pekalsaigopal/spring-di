@@ -3,7 +3,7 @@ package in.psg.springdi.services;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile("HI")
+@Profile({"HI","default"})
 @Service
 public class I18nHindiGreetingService implements GreetingService{
    @Override
