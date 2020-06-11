@@ -5,10 +5,25 @@ Created Three Types of Controllers
 
 Created a Service Interface GreetingService and it's implemented by GreetingServiceImpl
 
-Created JUnit Test classes for controllers
-1. ConstructorInjectedControllerTest
-2. PropertyInjectedControllerTest
-3. SetterInjectedControllerTest
+Spring Dependency Injection
 
-In these test classes see how manually dependency injection took place.
-Run these test classes.
+Spring Property Injection
+-------------------------
+1. Annotate PropertyInjectedController with @Controller
+2. Annotate field GreetingService with @Autowired (This is property injection)
+3. Annotate GreetingServiceImpl with @Service
+
+Spring Setter Injection
+-----------------------
+1. Annotate SetterInjectedController with @Controller
+2. Annotate setter setGreetingService with @Autowired (This is setter injection)
+3. Annotate GreetingServiceImpl with @Service
+
+Spring Constructor Injection
+-----------------------
+1. Annotate ConstructorInjectedController with @Controller
+2. No need to Annotate @Autowired on Constructor . (This is optional in Constructor injection)
+3. Annotate GreetingServiceImpl with @Service
+
+
+
