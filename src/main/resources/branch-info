@@ -1,40 +1,8 @@
-@Qualifier Annotation
----------------------
-The @Autowired annotation is a great way of making the need to inject
-a dependency in Spring explicit. And although it's useful, there are
-use cases for which this annotation alone isn't enough for Spring to
-understand which bean to inject.
+Two GreetingService implementation are there.
 
-By default, Spring resolves autowired entries by type.
+I18nEnglishGreetingService is annotated @Profile("EN")
 
-If more than one bean of the same type is available in the container,
-the framework will throw NoUniqueBeanDefinitionException, indicating
-that more than one bean is available for autowiring.
+I18nHindiGreetingService is annotated @Profile("HI")
 
-For an example the implementation for GreetingService is provided by
-three classes such as
-1. PropertyInjectedGreetingService
-2. SetterInjectedGreetingService
-3. ConstructorInjectedGreetingService
+When we set profile in application.properties, that Service will be injected.
 
-All three are annotated using @Service. So now IoC container is
-confused to inject which bean.
-
-In this case we have to tell IoC specifically which bean to inject.
-That we can do using @Qualifier annotation.
-
-In case of Constructor use @Qualifier inside the argument.
-
-In case of Setter above the @Autowire annotation.
-
-OR
-
-We can set one service as Primary Service by using @Primary annotation.
-
-In this case we set PrimaryGreetingService as Primary Bean.
-
-So no need to use @Qualifier annotation.
-
-If we will use @Qualifier then it will overpower @Primary annotation.
-
-In case of Property above the @Autowire annotation.

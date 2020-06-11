@@ -4,11 +4,11 @@ import in.psg.springdi.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class MyController {
+public class I18nController {
 
    private final GreetingService greetingService;
 
-   public MyController(GreetingService greetingService) {
+   public I18nController(GreetingService greetingService) {
       this.greetingService = greetingService;
    }
 
